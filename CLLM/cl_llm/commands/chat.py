@@ -56,8 +56,8 @@ def main(
     service = GeminiService()
     
     # Show welcome header
-    console.print(create_header(f"CLLM Chat Session: {chat_id}", "Interactive conversation with Gemini"))
-    console.print(create_system_message("👋 Welcome to CLLM Chat! Type your messages and press Enter to send. Use Shift+Enter for a new line. Type 'exit' or press Ctrl+D to end the conversation."))
+    console.print(create_header(f"CLLM Chat Session", "Interactive conversation with Gemini"))
+    console.print(create_system_message("👋 Welcome to CLLM Chat! Type your messages and press Enter to send. Type 'exit' or press Ctrl+D to end the conversation."))
     # Add a little spacing for visual comfort
     console.print("")
 
@@ -84,7 +84,7 @@ def main(
 
         if user_input.lower().strip() in ["exit", "quit", "q"]:
             console.print("")
-            console.print(create_system_message(f"👋 Chat session '{chat_id}' ended. Goodbye!"))
+            console.print(create_system_message(f"👋 Chat session ended. Goodbye!"))
             break
 
         if user_input.strip() == "":
